@@ -5,6 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 alias bower='noglob bower'
+alias npm='noglob npm'
+alias gulp='noglob gulp'
 alias nano="nano -T 2"
 
 # Networking
@@ -40,15 +42,11 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
 
-export RAILS_ENV='development'
-
 # Customize to your needs...
 PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
-PATH=/usr/local/share/python:$PATH
+PATH=/usr/local/share:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
 export NODE_PATH=/usr/local/lib/node_modules
-export HIVE_HOME=/usr/local/Cellar/hive/0.13.1/libexec
 
 . `brew --prefix`/etc/profile.d/z.sh
