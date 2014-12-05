@@ -26,6 +26,7 @@ alias tcstart="./bin/startup.sh"
 alias tcclean="rm -f ./logs/*.* | rm -Rf ./webapps/vha | rm -Rf ./webapps/vhn | rm -Rf ./webapps/vhs | rm -Rf ./temp/*.* | rm -Rf ./work/Catalina | rm -Rf ./temp/infinispan"
 alias tcstop="tcclean | ./bin/shutdown.sh"
 alias tclog="tail -f ./logs/catalina.out"
+alias gitall="cd /Users/kahwee/projects/tsar/; git pull; cd /Users/kahwee/projects/gulp-tasks; git pull; cd /Users/kahwee/projects/gulp-tasks-component; git pull; cd /Users/kahwee/projects/ui-server; git pull;"
 
 
 alias qd="date \"+%Y-%m-%d (KahWee):\" | pbcopy"
