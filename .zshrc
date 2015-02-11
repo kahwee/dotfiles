@@ -10,7 +10,7 @@ alias gulp='noglob gulp'
 alias nano="nano -T 2"
 
 # Networking
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="dig o-o.myaddr.l.google.com @ns1.google.com txt +short"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 alias ipaddr="/sbin/ifconfig eth0 | grep 'inet ' | cut -d\  -f2 && /sbin/ifconfig en0 | grep 'inet ' | cut -d\  -f2"
@@ -42,12 +42,16 @@ export JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms153
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
+export RBENV_ROOT=/usr/local/var/rbenv
+
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Customize to your needs...
 PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 PATH=/usr/local/share:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
+PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
+export PATH=$(brew --prefix ruby)/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 
 . `brew --prefix`/etc/profile.d/z.sh
