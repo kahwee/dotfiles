@@ -4,7 +4,6 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-alias bower='noglob bower'
 alias npm='noglob npm'
 alias gulp='noglob gulp'
 alias nano="nano -T 2"
@@ -46,15 +45,17 @@ export RBENV_ROOT=/usr/local/var/rbenv
 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-. <(npm completion)
-eval "$(gulp --completion=zsh)"
+# . <(npm completion)
+# eval "$(gulp --completion=zsh)"
 
 # Customize to your needs...
 #PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 PATH=/usr/local/share:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
 PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
+PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH=$(brew --prefix ruby)/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 #eval $(boot2docker shellinit)
-. `brew --prefix`/etc/profile.d/z.sh
+#. `brew --prefix`/etc/profile.d/z.sh
+eval "$(fasd --init auto)"
