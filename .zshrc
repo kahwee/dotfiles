@@ -15,12 +15,12 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 alias ipaddr="/sbin/ifconfig eth0 | grep 'inet ' | cut -d\  -f2 && /sbin/ifconfig en0 | grep 'inet ' | cut -d\  -f2"
 
 # Tremor Video work
-alias mvncleaninstall="mvn clean install -DskipTests -e -f pom-local.xml"
-alias mvncleaninstall2="mvn clean install -DskipTests -e"
-alias mvninstall="mvn install -DskipTests -e -f pom-local.xml"
-alias mvninstall2="mvn install -DskipTests -e"
-alias mvntc="mvn tomcat7:run -DskipTests -f pom-local.xml"
-alias mvntc2="mvn tomcat7:run -DskipTests"
+alias mvncleaninstall="mvn clean install -P\!ui-tools,\!ui-build -DskipTests -e -f pom-local.xml"
+alias mvncleaninstall2="mvn clean install -P\!ui-tools,\!ui-build -DskipTests -e"
+alias mvninstall="mvn install -DskipTests -P\!ui-tools,\!ui-build -e -f pom-local.xml"
+alias mvninstall2="mvn install -DskipTests -P\!ui-tools,\!ui-build -e"
+alias mvntc="mvn tomcat7:run -DskipTests -P\!ui-tools,\!ui-build -f pom-local.xml"
+alias mvntc2="mvn tomcat7:run -DskipTests -P\!ui-tools,\!ui-build"
 alias tcstart="./bin/startup.sh"
 alias tcclean="rm -f ./logs/*.* | rm -Rf ./webapps/vha | rm -Rf ./webapps/vhn | rm -Rf ./webapps/vhs | rm -Rf ./temp/*.* | rm -Rf ./work/Catalina | rm -Rf ./temp/infinispan"
 alias tcstop="tcclean | ./bin/shutdown.sh"
