@@ -7,6 +7,7 @@
 alias npm='noglob npm'
 alias gulp='noglob gulp'
 alias nano="nano -T 2"
+alias z='fasd_cd -d'
 
 # Networking
 alias ip="dig o-o.myaddr.l.google.com @ns1.google.com txt +short"
@@ -57,5 +58,5 @@ PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH=$(brew --prefix ruby)/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 #eval $(boot2docker shellinit)
-#. `brew --prefix`/etc/profile.d/z.sh
 eval "$(fasd --init auto)"
+eval "$(rbenv init -)"
