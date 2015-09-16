@@ -44,6 +44,7 @@ export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
 export RBENV_ROOT=/usr/local/var/rbenv
 
+
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # . <(npm completion)
@@ -59,4 +60,4 @@ export PATH=$(brew --prefix ruby)/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 #eval $(boot2docker shellinit)
 eval "$(fasd --init auto)"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
