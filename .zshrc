@@ -8,6 +8,7 @@ alias npm='noglob npm'
 alias gulp='noglob gulp'
 alias nano="nano -T 2"
 alias z='fasd_cd -d'
+alias st='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # Networking
 alias ip="dig o-o.myaddr.l.google.com @ns1.google.com txt +short"
