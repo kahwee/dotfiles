@@ -12,6 +12,7 @@ alias st='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # Networking
 alias ip="dig o-o.myaddr.l.google.com @ns1.google.com txt +short"
+alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 alias ipaddr="/sbin/ifconfig eth0 | grep 'inet ' | cut -d\  -f2 && /sbin/ifconfig en0 | grep 'inet ' | cut -d\  -f2"
