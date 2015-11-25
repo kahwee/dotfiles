@@ -63,3 +63,6 @@ export NODE_PATH=/usr/local/lib/node_modules
 #eval $(boot2docker shellinit)
 eval "$(fasd --init auto)"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# added by travis gem
+[ -f /Users/kahwee/.travis/travis.sh ] && source /Users/kahwee/.travis/travis.sh

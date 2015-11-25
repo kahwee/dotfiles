@@ -19,7 +19,7 @@
 		"*.map.js",
 		"*.min.css"
 	],
-	"color_scheme": "Packages/User/SublimeLinter/Oceanic Next (SL).tmTheme",
+	"color_scheme": "Packages/Oceanic Next Color Scheme/Oceanic Next.tmTheme",
 	"default_line_ending": "unix",
 	"folder_exclude_patterns":
 	[
@@ -29,7 +29,8 @@
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		".vscode"
 	],
 	"font_size": 14,
 	"highlight_line": true,
