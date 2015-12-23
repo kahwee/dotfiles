@@ -41,7 +41,7 @@ fi
 
 # Java and friends
 export JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=768m -XX:+DisableExplicitGC -Djava.io.tmpdir=/tmp"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
 export RBENV_ROOT=/usr/local/var/rbenv
