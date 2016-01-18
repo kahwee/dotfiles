@@ -58,7 +58,8 @@ PATH=/usr/local/share:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
 PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
 PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-export PATH=$(brew --prefix ruby)/bin:$PATH
+PATH=$(brew --prefix ruby)/bin:$PATH
+export PATH=$(npm config get prefix)/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 #eval $(boot2docker shellinit)
 eval "$(fasd --init auto)"
