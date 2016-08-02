@@ -67,3 +67,11 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # added by travis gem
 [ -f /Users/kahwee/.travis/travis.sh ] && source /Users/kahwee/.travis/travis.sh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/kahwee/Downloads/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc'
