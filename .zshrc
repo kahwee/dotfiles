@@ -39,17 +39,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Java and friends
-export JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=768m -XX:+DisableExplicitGC -Djava.io.tmpdir=/tmp"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
-export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
 export RBENV_ROOT=/usr/local/var/rbenv
 
 # . <(npm completion)
 # eval "$(gulp --completion=zsh)"
 
 # Customize to your needs...
+#
+#
+# Java and friends
+if which javac > /dev/null; then
+	export JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=768m -XX:+DisableExplicitGC -Djava.io.tmpdir=/tmp"
+	export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+	export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
+	export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
+fi;
 PATH=/usr/local/share:$PATH
 PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
 if which brew > /dev/null; then
@@ -72,7 +76,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/kahwee/Downloads/google-cloud-sdk/path.zsh.inc'
+[ -f /Users/kahwee/Downloads/google-cloud-sdk/path.zsh.inc ] && source '/Users/kahwee/Downloads/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc'
+[ -f /Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc ] && source '/Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc'
