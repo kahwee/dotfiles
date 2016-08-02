@@ -46,23 +46,24 @@ export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
 export RBENV_ROOT=/usr/local/var/rbenv
 
-
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # . <(npm completion)
 # eval "$(gulp --completion=zsh)"
 
 # Customize to your needs...
-#PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 PATH=/usr/local/share:$PATH
-PATH=/usr/local/share/npm/bin:$PATH
 PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
-PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-PATH=$(brew --prefix ruby)/bin:$PATH
-export PATH=$(npm config get prefix)/bin:$PATH
-export NODE_PATH=/usr/local/lib/node_modules
-#eval $(boot2docker shellinit)
+if which brew > /dev/null; then
+	PATH=$(brew --prefix homebrew/php/php56)/bin:$PATH;
+	PATH=$(brew --prefix ruby)/bin:$PATH;
+fi;
+if which npm > /dev/null; then
+	PATH=$(npm config get prefix)/bin:$PATH;
+	export NODE_PATH=/usr/local/lib/node_modules
+fi;
+export PATH=$PATH
+
 eval "$(fasd --init auto)"
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # added by travis gem
