@@ -19,7 +19,7 @@
 		"*.map.js",
 		"*.min.css"
 	],
-	"color_scheme": "Packages/Oceanic Next Color Scheme/Oceanic Next.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Oceanic Next (SL).tmTheme",
 	"default_line_ending": "unix",
 	"folder_exclude_patterns":
 	[
@@ -41,7 +41,29 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"4GL",
+		"ActionScript",
+		"AppleScript",
+		"ASP",
+		"C#",
+		"Clojure",
+		"D",
+		"Erlang",
+		"Graphviz",
+		"Groovy",
+		"Haskell",
 		"JavaScript",
+		"LaTeX",
+		"Lisp",
+		"Lua",
+		"Matlab",
+		"OCaml",
+		"Pascal",
+		"R",
+		"Rails",
+		"Rust",
+		"TCL",
+		"Textile",
 		"Vintage"
 	],
 	"index_exclude_patterns":
