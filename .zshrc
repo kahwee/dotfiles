@@ -54,7 +54,7 @@ if which javac > /dev/null; then
 	export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 	export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
 fi;
-PATH=/usr/local/share:$PATH
+PATH=/usr/local/share:~/bin:$PATH
 PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
 if which brew > /dev/null; then
 	PATH=$(brew --prefix homebrew/php/php56)/bin:$PATH;
