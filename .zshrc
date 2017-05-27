@@ -17,20 +17,6 @@ alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 alias ipaddr="/sbin/ifconfig eth0 | grep 'inet ' | cut -d\  -f2 && /sbin/ifconfig en0 | grep 'inet ' | cut -d\  -f2"
 
-# Tremor Video work
-alias mvncleaninstall="mvn clean install -P\!ui-tools,\!ui-build -DskipTests -e -f pom-local.xml"
-alias mvncleaninstall2="mvn clean install -P\!ui-tools,\!ui-build -DskipTests -e"
-alias mvninstall="mvn install -DskipTests -P\!ui-tools,\!ui-build -e -f pom-local.xml"
-alias mvninstall2="mvn install -DskipTests -P\!ui-tools,\!ui-build -e"
-alias mvntc="mvn tomcat7:run -DskipTests -P\!ui-tools,\!ui-build -f pom-local.xml"
-alias mvntc2="mvn tomcat7:run -DskipTests -P\!ui-tools,\!ui-build"
-alias tcstart="./bin/startup.sh"
-alias tcclean="rm -f ./logs/*.* | rm -Rf ./webapps/vha | rm -Rf ./webapps/vhn | rm -Rf ./webapps/vhs | rm -Rf ./temp/*.* | rm -Rf ./work/Catalina | rm -Rf ./temp/infinispan"
-alias tcstop="tcclean | ./bin/shutdown.sh"
-alias tclog="tail -f ./logs/catalina.out"
-alias gitall="cd /Users/kahwee/projects/tsar/; git pull; cd /Users/kahwee/projects/gulp-tasks; git pull; cd /Users/kahwee/projects/gulp-tasks-component; git pull; cd /Users/kahwee/projects/ui-server; git pull;"
-
-
 alias qd="date \"+%Y-%m-%d (KahWee):\" | pbcopy"
 alias qd2="date '+Occurred on %Y-%m-%d %I:%M %p %z' | pbcopy"
 
@@ -44,16 +30,6 @@ export RBENV_ROOT=/usr/local/var/rbenv
 # . <(npm completion)
 # eval "$(gulp --completion=zsh)"
 
-# Customize to your needs...
-#
-#
-# Java and friends
-if which javac > /dev/null; then
-	export JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=768m -XX:+DisableExplicitGC -Djava.io.tmpdir=/tmp"
-	export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-	export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
-	export CATALINA_OPTS="$CATALINA_OPTS -Dcom.sun.management.jmxremote.port=7004"
-fi;
 PATH=/usr/local/share:~/bin:$PATH
 PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
 if which brew > /dev/null; then
