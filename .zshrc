@@ -56,3 +56,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # The next line enables shell command completion for gcloud.
 [ -f /Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc ] && source '/Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
