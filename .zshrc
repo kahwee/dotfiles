@@ -7,7 +7,6 @@
 alias npm='noglob npm'
 alias gulp='noglob gulp'
 alias nano="nano -T 2"
-alias z='fasd_cd -d'
 alias st='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # Networking
@@ -25,36 +24,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-export RBENV_ROOT=/usr/local/var/rbenv
-
-# . <(npm completion)
-# eval "$(gulp --completion=zsh)"
-
-PATH=/usr/local/share:~/bin:$PATH
-PATH=/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin
 if which brew > /dev/null; then
-	PATH=$(brew --prefix homebrew/php/php56)/bin:$PATH;
-	PATH=$(brew --prefix ruby)/bin:$PATH;
+  PATH=/usr/local/opt/ruby/bin:$PATH
 fi;
-if which npm > /dev/null; then
-	PATH=$(npm config get prefix)/bin:$PATH;
-	export NODE_PATH=/usr/local/lib/node_modules
+
+if which ruby > /dev/null; then
+  export GEM_HOME=$HOME/.gem
+  export PATH=$GEM_HOME/bin:$PATH
 fi;
+
 export PATH=$PATH
 
-eval "$(fasd --init auto)"
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# added by travis gem
-[ -f /Users/kahwee/.travis/travis.sh ] && source /Users/kahwee/.travis/travis.sh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# The next line updates PATH for the Google Cloud SDK.
-[ -f /Users/kahwee/Downloads/google-cloud-sdk/path.zsh.inc ] && source '/Users/kahwee/Downloads/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-[ -f /Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc ] && source '/Users/kahwee/Downloads/google-cloud-sdk/completion.zsh.inc'
+if which fasd > /dev/null; then
+  alias z='fasd_cd -d'
+  eval "$(fasd --init auto)"
+fi;
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
