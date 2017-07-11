@@ -36,7 +36,6 @@ fi;
 export PATH=$PATH
 
 if which fasd > /dev/null; then
-  alias z='fasd_cd -d'
   eval "$(fasd --init auto)"
 fi;
 
