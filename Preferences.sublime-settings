@@ -19,7 +19,7 @@
 		"*.map.js",
 		"*.min.css"
 	],
-	"color_scheme": "Packages/User/SublimeLinter/Oceanic Next (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/MagicDyes (SL).tmTheme",
 	"default_line_ending": "unix",
 	"folder_exclude_patterns":
 	[
@@ -32,8 +32,6 @@
 		"CVS",
 		".vscode",
 		"dist",
-		"lib",
-		"bin",
 		"coverage"
 	],
 	"font_size": 12,
