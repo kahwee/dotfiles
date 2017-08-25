@@ -26,6 +26,7 @@ fi
 
 if which brew > /dev/null; then
   PATH=/usr/local/opt/ruby/bin:$PATH
+  PATH="/usr/local/opt/php72/bin:$PATH"
 fi;
 
 if which ruby > /dev/null; then
@@ -33,6 +34,9 @@ if which ruby > /dev/null; then
   export PATH=$GEM_HOME/bin:$PATH
 fi;
 
+if which exa > /dev/null; then
+  alias ls="exa"
+fi;
 export PATH=$PATH
 
 if which fasd > /dev/null; then
