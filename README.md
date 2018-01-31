@@ -11,8 +11,19 @@ sudo apt install fasd
 ```
 
 
-Setup zshrc
-```
+To setup zshrc for [prezto](https://github.com/sorin-ionescu/prezto):
+
+```sh
 ln -sf ./dotfiles/.zpreztorc .zpreztorc
 ln -sf ./dotfiles/.zshrc .zshrc
+```
+
+## Brew tools
+
+```sh
+brew install git wget zsh
+brew install node
+brew install yarn
+brew install fasd
+brew cask install iina
 ```
