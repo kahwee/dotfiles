@@ -22,7 +22,7 @@ ln -sf ./dotfiles/.zshrc .zshrc
 
 ```sh
 brew install git wget zsh
-brew install node
+brew install node exa
 brew install yarn
 brew install fasd
 brew cask install iina
