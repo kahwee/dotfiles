@@ -43,6 +43,8 @@ if which fasd > /dev/null; then
   eval "$(fasd --init auto)"
 fi;
 
+export GPG_TTY=$(tty)
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 test -e "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
