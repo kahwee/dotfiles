@@ -39,6 +39,9 @@ if which exa > /dev/null; then
   alias ls="exa"
 fi;
 export PATH=$PATH
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
+export JAVA_HOME=$JAVA_8_HOME
 
 if which fasd > /dev/null; then
   eval "$(fasd --init auto)"

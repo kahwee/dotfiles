@@ -23,10 +23,12 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
+zstyle ':prezto:module:node:info:version' format 'version:%v'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'node' \
   'history' \
   'directory' \
   'git' \
