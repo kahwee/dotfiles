@@ -6,6 +6,7 @@ else
   compinit -C;
 fi;
 bindkey -e
+bindkey "\e[3~" delete-char
 
 autoload -U promptinit; promptinit
 prompt pure
