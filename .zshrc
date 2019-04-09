@@ -12,6 +12,8 @@ bindkey "\e[3~" delete-char
 autoload -U promptinit; promptinit
 prompt pure
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home
+
 alias ll='ls -al'
 alias npm='noglob npm'
 alias gulp='noglob gulp'
