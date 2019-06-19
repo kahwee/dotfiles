@@ -1,6 +1,6 @@
 # zsh specific
 fpath=( "$HOME/.zfunctions" $fpath )
-autoload -Uz compinit 
+autoload -Uz compinit
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
   compinit;
 else
@@ -24,7 +24,8 @@ export EDITOR='nano'
 # Networking
 alias ip="dig o-o.myaddr.l.google.com @ns1.google.com txt +short"
 alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
-
+alias npmself="ln -sf /Users/kahwee/.npmrc_self /Users/kahwee/.npmrc"
+alias npmuber="ln -sf /usr/local/opt/uber-developer/share/npmrc /Users/kahwee/.npmrc"
 alias qd="date \"+%Y-%m-%d (KahWee):\" | pbcopy"
 
 if which brew > /dev/null; then
