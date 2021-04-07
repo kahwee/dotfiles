@@ -1,4 +1,8 @@
 # zsh specific
+
+export VOLTA_HOME="/Users/kahwee/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 fpath=( "$HOME/.zfunctions" $fpath )
 autoload -Uz compinit
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
@@ -16,7 +20,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Hom
 
 alias ll='ls -al'
 alias npm='noglob npm'
-alias gulp='noglob gulp'
 alias nano="nano -T 2"
 alias st='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 export EDITOR='nano'
@@ -52,9 +55,6 @@ fi;
 
 export GPG_TTY=$(tty)
 
-export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
 export HOMEBREW_NO_ANALYTICS=1
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -62,3 +62,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 source "${HOME}/dotfiles/git-aliases.zsh"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export GOPATH="$HOME/gocode"
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$(yarn global bin):$PATH"
+
+export PATH="$VOLTA_HOME/bin:$PATH"
+
